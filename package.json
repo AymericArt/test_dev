@@ -1,0 +1,31 @@
+{
+  "name": "test_webtrio",
+  "version": "1.0.0",
+  "description": "A [Docker](https://www.docker.com/)-based installer and runtime for the [Symfony](https://symfony.com) web framework, with full [HTTP/2](https://symfony.com/doc/current/weblink.html), HTTP/3 and HTTPS support.",
+  "main": "webpack.config.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@symfony/webpack-encore": "^3.0.0",
+    "sass": "^1.53.0",
+    "sass-loader": "^13.0.2",
+    "webpack-notifier": "^1.15.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "encore": "encore"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AymericArt/test_webtrio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AymericArt/test_webtrio/issues"
+  },
+  "homepage": "https://github.com/AymericArt/test_webtrio#readme"
+}
