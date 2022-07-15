@@ -30,7 +30,7 @@ services:
     depends_on:
       - database
     ports:
-      - "8084:80"
+      - "8085:80"
 
   php:
     build:
