@@ -2,6 +2,20 @@ version: "3.4"
 
 # Production environment override
 services:
+  database:
+    container_name: test_mysql
+    image: 'mysql:latest'
+    environment:
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+    ports:
+      - '3306'
+    volumes:
+      - db-data:/var/lib/postgresql/data:rw
+
   php:
     environment:
       APP_ENV: prod

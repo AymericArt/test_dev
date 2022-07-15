@@ -20,6 +20,10 @@ RUN apk add --no-cache \
 	;
 
 ARG APCU_VERSION=5.1.21
+
+RUN docker-php-ext-install pdo pdo_mysql
+RUN docker-php-ext-enable pdo_mysql
+
 RUN set -eux; \
 	apk add --no-cache --virtual .build-deps \
 		$PHPIZE_DEPS \
@@ -94,7 +98,9 @@ RUN composer create-project "${SKELETON} ${SYMFONY_VERSION}" . --stability=$STAB
 	composer clear-cache
 
 ###> recipes ###
+###< doctrine/doctrine-bundle ###
 ###< recipes ###
+
 
 COPY . .
 

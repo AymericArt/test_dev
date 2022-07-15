@@ -2,6 +2,7 @@ version: "3.4"
 
 # Development environment override
 services:
+
   php:
     volumes:
       # The "cached" option has no effect on Linux but improves performance on Mac
@@ -17,6 +18,14 @@ services:
     volumes:
       - ./docker/caddy/Caddyfile:/etc/caddy/Caddyfile:ro
       - ./public:/srv/app/public:ro
-
 ###> symfony/mercure-bundle ###
 ###< symfony/mercure-bundle ###
+
+###> doctrine/doctrine-bundle ###
+
+###< doctrine/doctrine-bundle ##
+###> symfony/mailer ###
+  mailer:
+    image: schickling/mailcatcher
+    ports: [1025, 1080]
+###< symfony/mailer ###
