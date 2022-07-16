@@ -3,7 +3,8 @@
 {% block title %}Hello PersonneController!{% endblock %}
 
 {% block body %}
-    {{ form_start(form) }}
+    <div class="form-group">
+        {{ form_start(form) }}
         {{ form_errors(form) }}
 
         {{ form_row(form.nom) }}
@@ -11,5 +12,8 @@
         {{ form_row(form.dateDeNaissance) }}
 
         {{ form_row(form.submit, { 'label': 'Ajouter' }) }}
-    {{ form_end(form) }}
+        {{ form_end(form) }}
+    </div>
+
+    <a class="btn btn-info" href="{{ path("list_personne")}}">Visualiser</a>
 {% endblock %}

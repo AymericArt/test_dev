@@ -70,7 +70,7 @@ class Personne
     {
         $metadata->addPropertyConstraint(
             'dateDeNaissance',
-            new Assert\GreaterThan('- 100 years', null, "Attention seule les personnes de moins de 150 ans peuvent être enregistrées")
+            new Assert\GreaterThan('- 150 years', null, "Attention seule les personnes de moins de 150 ans peuvent être enregistrées")
         );
     }
 }

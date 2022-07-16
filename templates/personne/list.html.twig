@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PersonneController!{% endblock %}
+
+{% block body %}
+    <table>
+        <tr>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Age</th>
+        </tr>
+        {% for personne in listePersonne %}
+            {% set age = date().diff(date(personne.dateDeNaissance)).y %}
+
+            <tr>
+                <td>{{ personne.nom }}</td>
+                <td>{{ personne.prenom }}</td>
+                <td>{{ age }}</td>
+            </tr>
+        {% endfor%}
+    </table>
+    <a href="{{ path("add_personne")}}">Ajouter une personne</a>
+
+{% endblock %}
