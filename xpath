@@ -9,3 +9,34 @@ Nombre de book: 5
 Nombre de book: 1
 
 4) Que renvoie la requête XPath suivante :  /library/library/ancestor-or-self::library:
+Element='<library>
+	  <book>
+		    <title>toto1</title>
+		    <author>titi</author>
+	  </book>
+	  <book type="doc">
+		    <title>toto2</title>
+		    <author>titi</author>
+	  </book>
+	  <book type="roman">
+		    <title>toto3</title>
+		    <author>titi</author>
+	  </book>
+	  <book type="bd">
+		    <title>toto4</title>
+		    <author>titi2</author>
+	  </book>
+	  <library>
+		    <book type="roman">
+			      <title>toto5</title>
+			      <author>titi</author>
+		    </book>
+	  </library>
+</library>'
+
+Element='<library>
+		<book type="roman">
+			   <title>toto5</title>
+			   <author>titi</author>
+		</book>
+	</library>'

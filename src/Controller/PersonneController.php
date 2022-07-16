@@ -32,7 +32,7 @@ class PersonneController extends AbstractController
          * Le contrôle de l'âge est dans l'entité afin de centraliser les contrôles.
          * Methode : loadValidatorMetadata()
          *
-         * Nous arions pu utiliser les groupes
+         * Nous arions pu utiliser les groupes ou le traiter directement dans le controller.
          */
         if ($form->isSubmitted() && $form->isValid()) {
             $this->entityManager->persist($personne);
