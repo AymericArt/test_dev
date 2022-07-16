@@ -2,26 +2,26 @@
 
 namespace App\Repository;
 
-use App\Entity\Pizzeria;
+use App\Entity\Personne;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Pizzeria>
+ * @extends ServiceEntityRepository<Personne>
  *
- * @method Pizzeria|null find($id, $lockMode = null, $lockVersion = null)
- * @method Pizzeria|null findOneBy(array $criteria, array $orderBy = null)
- * @method Pizzeria[]    findAll()
- * @method Pizzeria[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Personne|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Personne|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Personne[]    findAll()
+ * @method Personne[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class PizzeriaRepository extends ServiceEntityRepository
+class PersonneRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Pizzeria::class);
+        parent::__construct($registry, Personne::class);
     }
 
-    public function add(Pizzeria $entity, bool $flush = false): void
+    public function add(Personne $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
 
@@ -30,7 +30,7 @@ class PizzeriaRepository extends ServiceEntityRepository
         }
     }
 
-    public function remove(Pizzeria $entity, bool $flush = false): void
+    public function remove(Personne $entity, bool $flush = false): void
     {
         $this->getEntityManager()->remove($entity);
 
@@ -40,7 +40,7 @@ class PizzeriaRepository extends ServiceEntityRepository
     }
 
 //    /**
-//     * @return Pizzeria[] Returns an array of Pizzeria objects
+//     * @return Personne[] Returns an array of Personne objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -54,7 +54,7 @@ class PizzeriaRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?Pizzeria
+//    public function findOneBySomeField($value): ?Personne
 //    {
 //        return $this->createQueryBuilder('p')
 //            ->andWhere('p.exampleField = :val')

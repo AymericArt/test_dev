@@ -1,0 +1,11 @@
+1) Retourner tous les éléments book:
+Nombre de book: 5
+
+2) Retourner tous les éléments title ayant comme parent un élément book avec un attribut type égal à roman:
+<title>toto5</title>
+<title>toto3</title>
+
+3) Retourner le nombre d'éléments book ayant un attribut type égal à bd
+Nombre de book: 1
+
+4) Que renvoie la requête XPath suivante :  /library/library/ancestor-or-self::library:
