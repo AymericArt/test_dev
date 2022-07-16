@@ -25,7 +25,7 @@ services:
     container_name: test_phpmyadmin
     restart: always
     environment:
-      PMA_HOST: test_mysql
+      PMA_HOST: database
       MYSQL_ROOT_PASSWORD: test
     depends_on:
       - database
